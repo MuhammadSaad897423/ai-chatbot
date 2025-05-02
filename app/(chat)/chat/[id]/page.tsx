@@ -13,7 +13,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const { id } = params;
   const chat = await getChatById({ id });
-
+import type { Attachment, UIMessage } from 'ai';
   if (!chat) {
     notFound();
   }
